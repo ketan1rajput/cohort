@@ -9,7 +9,8 @@ function isPalindrome(str) {
     let count = 0;
     while(start<end){
         if(str[start]!=str[end]){
-            count=1
+            count=1;
+            break;
         }
         start++;
         end--;
