@@ -9,14 +9,21 @@
     <button onclick=getTheData()>get the data</button>
 </body>
 <script>
-    function getTheData(){
-        fetch("https://fakerapi.it/api/v1/persons")
-        .then(function(response){
-            response.json()
-            .then(function(finalData) {
-                console.log("this is final data", finalData);
-            })
-        })
+    // function getTheData(){
+    //     fetch("https://fakerapi.it/api/v1/persons")
+    //     .then(function(response){
+    //         response.json()
+    //         .then(function(finalData) {
+    //             console.log("this is final data", finalData);
+    //         })
+    //     })
+    // }
+    async function getTheData() {
+        const response = await fetch("https://fakerapi.it/api/v1/persons");
+        const finalData = await response.json();
+        console.log("final data");
+
+
     }
 </script>
 </html>
